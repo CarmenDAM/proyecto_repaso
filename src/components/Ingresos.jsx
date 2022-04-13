@@ -1,13 +1,12 @@
 import React from "react";
+import styles from './Estilos.css';
+import ReactDOM from 'react-dom';
 
 export default class Ingresos extends React.Component{
 
        
       render(){
-        return(
-            <div>
-              <h2>Este es un componente de Ingresos </h2>
-            </div>
-        );
+        return <h1 className="colorIngresos">+ INGRESOS +</h1>;
+        
       }
     }

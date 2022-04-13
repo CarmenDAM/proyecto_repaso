@@ -5,9 +5,10 @@ import MiPrimerComponente from '../components/MiPrimerComponente';
 import Gastos from '../components/Gastos';
 import Ingresos from '../components/Ingresos';
 import Transacciones from '../components/Transacciones';
+import styles from '../components/Estilos.css';
 
 const MenuElems = [
-
+/* 
     {
         path: "/",
         defaultRoute:true,
@@ -15,7 +16,7 @@ const MenuElems = [
         componentSite: <MiPrimerComponente />
     },
 
-    {
+   {
         path: "/juana",
         defaultRoute:false,
         text: "Juana",
@@ -34,25 +35,25 @@ const MenuElems = [
         defaultRoute:false,
         text: "Carlos",
         componentSite: <MiPrimerComponenteClase nombre="Carlos" apellido="López" color="blue"/>
-    },
+    },*/
 
     {
-        path: "/",
-        defaultRoute:true,
+        path: "/gastos",
+        defaultRoute:false,
         text: "Gastos",
         componentSite: <Gastos/>
     },
 
     {
-        path: "/",
-        defaultRoute:true,
+        path: "/ingresos",
+        defaultRoute:false,
         text: "Ingresos",
         componentSite: <Ingresos/>
     },
 
     {
-        path: "/",
-        defaultRoute:true,
+        path: "/transacciones",
+        defaultRoute:false,
         text: "Transacciones",
         componentSite: <Transacciones/>
     }

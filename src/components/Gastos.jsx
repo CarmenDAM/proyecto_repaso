@@ -1,13 +1,16 @@
 import React from "react";
+import ReactDOM from 'react-dom';
+import styles from './Estilos.css';
 
 export default class Gastos extends React.Component{
 
        
       render(){
-        return(
-            <div>
-              <h2>Este es un componente de Gastos </h2>
-            </div>
-        );
-      }
-    }
+        
+        return <h1 className="colorGastos">- GASTOS -</h1>;
+        
+        }
+  }
+
+
+  

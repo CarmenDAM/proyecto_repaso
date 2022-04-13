@@ -1,0 +1,29 @@
+
+body {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 40px;
+    font-family: Arial;
+    text-align: center;
+  }
+
+  .colorGastos {
+    color: rgb(228, 78, 110);
+  }
+
+  .colorIngresos {
+    color: rgb(113, 228, 84);
+
+  }
+
+  .colorTransacciones {
+    color: rgb(81, 136, 240);
+
+  }
+
+  h1 {
+    padding: 40px;
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 100;
+  }

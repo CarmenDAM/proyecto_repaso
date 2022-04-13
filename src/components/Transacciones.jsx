@@ -1,13 +1,11 @@
 import React from "react";
+import ReactDOM from 'react-dom';
+import styles from './Estilos.css';
 
 export default class Transacciones extends React.Component{
 
        
       render(){
-        return(
-            <div>
-              <h2>Este es un componente de Transacciones </h2>
-            </div>
-        );
+        return <h1 className="colorTransacciones"> TRANSACCIONES </h1>;
       }
     }
