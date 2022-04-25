@@ -15,7 +15,7 @@ const MenuElems = [
         componentSite: <MiPrimerComponente />
     },
 
-    {
+    /*{
         path: "/juana",
         defaultRoute:false,
         text: "Juana",
@@ -34,7 +34,7 @@ const MenuElems = [
         defaultRoute:false,
         text: "Carlos",
         componentSite: <MiPrimerComponenteClase nombre="Carlos" apellido="López" color="blue"/>
-    },
+    },*/
 
     {
         path: "/gastos",
