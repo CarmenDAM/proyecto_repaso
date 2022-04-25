@@ -37,21 +37,21 @@ const MenuElems = [
     },
 
     {
-        path: "/",
+        path: "/gastos",
         defaultRoute:true,
         text: "Gastos",
         componentSite: <Gastos/>
     },
 
     {
-        path: "/",
+        path: "/ingresos",
         defaultRoute:true,
         text: "Ingresos",
         componentSite: <Ingresos/>
     },
 
     {
-        path: "/",
+        path: "/transacciones",
         defaultRoute:true,
         text: "Transacciones",
         componentSite: <Transacciones/>
