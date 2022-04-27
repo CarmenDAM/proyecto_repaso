@@ -12,12 +12,14 @@ import Button from '@mui/material/Button';
 //import Button from 'react-native';
 //import 'react-native';
 
+//COLORES: primary, secondary, error, success, warning, default, inherit, info
+
 function App() {
   return (
     <Router>
       <nav>
         {MenuElems.map((item)=>{
-            return (<Button key={uuid()}> <Link to={item.path}>{item.text}</Link></Button>);
+            return (<Button variant="contained" color="primary" key={uuid()}> <Link to={item.path}>{item.text}</Link></Button>);
           } )}
 
       </nav>

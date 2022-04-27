@@ -15,7 +15,7 @@ export default class Gastos extends React.Component{
         
         return <div>
                 <h1 className="colorGastos">- GASTOS -</h1>
-                <Button variant="contained">Hello World</Button>
+                <Button variant="contained" color="error">GASTOS</Button>
                 </div>
         }
   }
