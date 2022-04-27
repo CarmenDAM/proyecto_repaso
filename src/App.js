@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import uuid from 'react-uuid';
 import MenuElems from './data/MenuElems';
+import Button from '@mui/material/Button';
 
 //import Button from 'react-native';
 //import 'react-native';
@@ -15,21 +16,16 @@ function App() {
   return (
     <Router>
       <nav>
-        <ul>
-          {MenuElems.map( function creaEnlace(item, index){
-            return (<li key={uuid()}><Link to={item.path} default>{item.text}</Link></li>);
+        {MenuElems.map((item)=>{
+            return (<Button key={uuid()}> <Link to={item.path}>{item.text}</Link></Button>);
           } )}
 
-
-        </ul>
       </nav>
-      {MenuElems.map(function showRoutes(item,index){
+      {MenuElems.map(function showRoutes(item){
         return (<Route path={item.path} key={uuid()} exact={item.defaultRoute}>{item.componentSite}</Route>);
       })}
 
-{/*<Button variant="primary" type="submit" onClick={this.login}>
-                Submit
-              </Button>*/}
+
 
     </Router>
   );
