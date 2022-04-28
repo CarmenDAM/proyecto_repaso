@@ -19,7 +19,7 @@ function App() {
     <Router>
       <nav>
         {MenuElems.map((item)=>{
-            return (<Button variant="contained" color="primary" key={uuid()}> <Link to={item.path}>{item.text}</Link></Button>);
+            return (<Button variant="contained" className={item.class} key={uuid()}> <Link to={item.path}>{item.text}</Link></Button>);
           } )}
 
       </nav>

@@ -15,7 +15,13 @@ export default class Transacciones extends React.Component{
         
         return <div>
                 <h1 className="colorTransacciones">TRANSACCIONES</h1>
-                <Button variant="contained" color="primary">TRANSACCIONES</Button>
+                <h2>Cantidad: </h2>
+                <h2>Tipo: </h2>
+                <h2>Descripción: </h2>
+                <h2>Fecha: </h2>
+                <h2>Moneda: </h2>
+                <Button className="guardar" variant="contained" color="success">Guardar</Button>
+                <Button variant="contained" color="error">Cancelar</Button>
                 </div>
         }
   }

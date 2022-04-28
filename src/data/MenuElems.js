@@ -44,7 +44,8 @@ const MenuElems = [
         path: "/gastos",
         defaultRoute:false,
         text: "Gastos",
-        componentSite: <Gastos/>
+        componentSite: <Gastos/>,
+        class:"btn-gastos"
     },
 
 
@@ -52,14 +53,16 @@ const MenuElems = [
         path: "/ingresos",
         defaultRoute:false,
         text: "Ingresos",
-        componentSite: <Ingresos/>
+        componentSite: <Ingresos/>,
+        class:"btn-ingresos"
     },
 
     {
         path: "/transacciones",
         defaultRoute:false,
         text: "Transacciones",
-        componentSite: <Transacciones/>
+        componentSite: <Transacciones/>,
+        class:"btn-transacciones"
     }
 
 ];

@@ -25,3 +25,31 @@ body {
     text-align: center;
     font-size: 100;
   }
+
+  h2 {
+    padding: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: left;
+    font-size: 100;
+    margin-left: 150px;
+  }
+
+  /*.guardar{
+    margin-right:0px !important;
+  }*/
+
+  Button{
+    margin-left:10px !important;
+  }
+
+  .btn-gastos {
+    background-color: #ff8282!important;
+  }
+
+  .btn-ingresos {
+    background-color: #8cff8c!important;
+  }
+
+  .btn-transacciones {
+    background-color: #87bdfc!important;
+  }
