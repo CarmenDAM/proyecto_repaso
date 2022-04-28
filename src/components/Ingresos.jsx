@@ -13,7 +13,7 @@ export default class Ingresos extends React.Component{
        
       render(){
         
-        return <div>
+        return <div className="fondoI">
                 <h1 className="colorIngresos">+ INGRESOS +</h1>
                 <h2>Cantidad: </h2>
                 <h2>Tipo: </h2>

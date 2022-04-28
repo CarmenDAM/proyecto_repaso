@@ -13,7 +13,7 @@ export default class Transacciones extends React.Component{
        
       render(){
         
-        return <div>
+        return <div className="fondoT">
                 <h1 className="colorTransacciones">TRANSACCIONES</h1>
                 <h2>Cantidad: </h2>
                 <h2>Tipo: </h2>
