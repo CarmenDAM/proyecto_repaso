@@ -6,6 +6,7 @@ import '../App.css';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
+import MenuItem from '@mui/material/MenuItem';
 
 
 
@@ -15,11 +16,26 @@ function App() {
          
 }
 
+const currencies = [
+  {value: 'USD',
+    label: '$',
+  },
+  {value: 'EUR',
+    label: '€',
+  },
+  {value: 'BTC',
+    label: '฿',
+  },
+  {value: 'JPY',
+    label: '¥',
+  },
+];
+
 export default class Gastos extends React.Component{
 
        
       render(){
-        
+                
         return (
                    
         <Box component="form" sx={{
@@ -28,13 +44,18 @@ export default class Gastos extends React.Component{
 
         <div className="fondoG">
                 <h1 className="colorGastos">- GASTOS -</h1>
+
                 <h2>Cantidad: </h2>
                 <TextField id="cantidad" label="Cantidad" variant="standard" />
+                
                 <h2>Tipo: </h2>
                 <TextField id="tipo" label="Tipo" variant="standard" />
+
                 <h2>Descripción: </h2>
                 <TextField id="descripción" label="Descripción" variant="standard" />
+
                 <h2>Fecha: </h2>
+                
                 <h2>Moneda: </h2>
 
                 <Button className="guardar" variant="contained" color="success">Guardar</Button>
