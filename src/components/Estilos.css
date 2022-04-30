@@ -20,18 +20,18 @@ body {
   }
 
   h1 {
-    padding: 40px;
+    padding: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
     font-size: 100;
   }
 
   h2 {
-    padding: 5px;
+    padding: 1px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: left;
-    font-size: 100;
-    margin-left: 150px;
+    font-size: 70;
+    margin-left: 5px;
   }
 
   /*.guardar{
@@ -39,7 +39,7 @@ body {
   }*/
 
   Button{
-    margin-left:10px !important;
+    margin-left:5px !important;
   }
 
   .btn-gastos {
