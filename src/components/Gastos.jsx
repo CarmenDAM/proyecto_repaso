@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import ReactDOM from 'react-dom';
 import styles from './Estilos.css';
 import '../App.css';
@@ -8,6 +8,7 @@ import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
 import MenuItem from '@mui/material/MenuItem';
 
+import { Image, ScrollView, Text } from 'react-native'; 
 
 
 function App() {
@@ -15,6 +16,12 @@ function App() {
          <Button variant="contained">Hello World</Button>;
          
 }
+
+/*const logo = {
+  uri: 'https://reactnative.dev/img/tiny_logo.png',
+  width: 64,
+  height: 64
+};*/
 
 const currencies = [
   {value: 'USD',
@@ -33,11 +40,28 @@ const currencies = [
 
 export default class Gastos extends React.Component{
 
-       
+ 
       render(){
+
+        /*const App = () => (
+          <ScrollView>
+            <Text style={{ fontSize: 96 }}>Scroll me plz</Text>
+            <Image source={logo} />
+            <Image source={logo} />
+            <Image source={logo} />
+            <Image source={logo} />
+            <Image source={logo} />
+            <Text style={{ fontSize: 96 }}>If you like</Text>
+            <Image source={logo} />
+            <Image source={logo} />
+            <Image source={logo} />
+            <Image source={logo} />
+            <Image source={logo} />
+          </ScrollView>
+        ); */
                 
         return (
-                   
+        
         <Box component="form" sx={{
         '& > :not(style)': { m: 1, width: '25ch' },
       }}noValidate autoComplete="off">
@@ -60,12 +84,12 @@ export default class Gastos extends React.Component{
 
                 <Button className="guardar" variant="contained" color="success">Guardar</Button>
                 <Button variant="contained" color="error">Cancelar</Button>
-                
-        </div>
+
+                </div>
+
             </Box>
-                );
-                
-                             
+   
+                );  
         }
   }
 
