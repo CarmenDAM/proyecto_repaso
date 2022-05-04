@@ -8,7 +8,7 @@ import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
 import MenuItem from '@mui/material/MenuItem';
 
-import { Image, ScrollView, Text } from 'react-native'; 
+import { StyleSheet, Text, SafeAreaView, ScrollView, StatusBar } from 'react-native';
 
 
 function App() {
@@ -16,13 +16,6 @@ function App() {
          <Button variant="contained">Hello World</Button>;
          
 }
-
-const logo = {
-  uri: 'https://reactnative.dev/img/tiny_logo.png',
-  width: 64,
-  height: 64
-};
-
 
 
 const currencies = [
@@ -40,10 +33,24 @@ const currencies = [
   },
 ];
 
+const estilo = StyleSheet.create({
+  container: {
+    flex: 1,
+    paddingTop: StatusBar.currentHeight,
+  },
+  scrollView: {
+    backgroundColor: 'pink',
+    marginHorizontal: 20,
+  },
+  text: {
+    fontSize: 42,
+  },
+});
+
 export default class Gastos extends React.Component{
 
       render(){
-      
+        
         return (
         
         <Box component="form" sx={{
@@ -71,27 +78,35 @@ export default class Gastos extends React.Component{
 
             </div>
 
-            <div>
-              <ScrollView>
-                <Text style={{ fontSize: 96 }}>Scroll me plz</Text>
-                <Image source={logo} />
-                <Image source={logo} />
-                <Image source={logo} />
-                <Image source={logo} />
-                <Image source={logo} />
-                <Text style={{ fontSize: 96 }}>If you like</Text>
-                <Image source={logo} />
-                <Image source={logo} />
-                <Image source={logo} />
-                <Image source={logo} />
-                <Image source={logo} />
-              </ScrollView>
-            </div>
+            
+      <ScrollView estilo={estilo.scrollView}>
+        <Text estilo={estilo.text}>
+          Aquí irían los datos de las transacciones:
+        </Text>
+        
+        <Text>
+          -
+          -
+          -
+          -
+          -
+          -
+          -
+          -
+          -
+          -
+          -
+          -
+          -
+          -
+        </Text>
+      </ScrollView>
+    
+            
         </Box>
 
                 );  
         }
   }
-
 
   
