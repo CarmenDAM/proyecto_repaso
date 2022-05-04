@@ -42,6 +42,10 @@ body {
     margin-left:5px !important;
   }
 
+  .lista{
+    height: 200px !important;
+  }
+
   .btn-gastos {
     background-color: #ff8282!important;
   }

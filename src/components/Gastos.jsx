@@ -8,7 +8,7 @@ import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
 import MenuItem from '@mui/material/MenuItem';
 
-import { StyleSheet, Text, SafeAreaView, ScrollView, StatusBar } from 'react-native';
+import { Text, ScrollView } from 'react-native';
 
 
 function App() {
@@ -33,19 +33,6 @@ const currencies = [
   },
 ];
 
-const estilo = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingTop: StatusBar.currentHeight,
-  },
-  scrollView: {
-    backgroundColor: 'pink',
-    marginHorizontal: 20,
-  },
-  text: {
-    fontSize: 42,
-  },
-});
 
 export default class Gastos extends React.Component{
 
@@ -76,52 +63,36 @@ export default class Gastos extends React.Component{
                 <Button className="guardar" variant="contained" color="success">Guardar</Button>
                 <Button variant="contained" color="error">Cancelar</Button>
 
-            </div>
+        </div>
 
-            
-      <ScrollView estilo={estilo.scrollView}>
-        <Text estilo={estilo.text}>
-          Aquí irían los datos de las transacciones:
-        </Text>
+        <div className="lista">     
+            <ScrollView>
+                <Text>
+                    Aquí irían los datos de las transacciones:
+                </Text>
         
-        <Text>
-          -
-          -
-          -
-          -
-          -
-          -
-          -
-          -
-          -
-          -
-          -
-          -
-          -
-          -
-        </Text>
-        //height: 200px;
-        <Text>
-        Un soneto me manda hacer Violante
-        que en mi vida me he visto en tanto aprieto;
-        catorce versos dicen que es soneto;
-        burla burlando van los tres delante.
+        
+                <Text>
+                    Un soneto me manda hacer Violante
+                    que en mi vida me he visto en tanto aprieto;
+                    catorce versos dicen que es soneto;
+                    burla burlando van los tres delante.
 
-        Yo pensé que no hallara consonante,
-        y estoy a la mitad de otro cuarteto;
-        mas si me veo en el primer terceto,
-        no hay cosa en los cuartetos que me espante.
+                    Yo pensé que no hallara consonante,
+                    y estoy a la mitad de otro cuarteto;
+                    mas si me veo en el primer terceto,
+                    no hay cosa en los cuartetos que me espante.
 
-        Por el primer terceto voy entrando,
-        y parece que entré con pie derecho,
-        pues fin con este verso le voy dando.
+                    Por el primer terceto voy entrando,
+                    y parece que entré con pie derecho,
+                    pues fin con este verso le voy dando.
 
-        Ya estoy en el segundo, y aun sospecho
-        que voy los trece versos acabando;
-        contad si son catorce, y está hecho.
-        </Text>
-      </ScrollView>
-    
+                    Ya estoy en el segundo, y aun sospecho
+                    que voy los trece versos acabando;
+                    contad si son catorce, y está hecho.
+                </Text>
+              </ScrollView>
+          </div>
             
         </Box>
 

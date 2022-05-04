@@ -18,6 +18,9 @@
   color: #61dafb;
 }
 
+.lista{
+  height: 200px;
+}
 
 
 @keyframes App-logo-spin {
