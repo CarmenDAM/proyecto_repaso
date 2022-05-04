@@ -23,22 +23,7 @@ const logo = {
   height: 64
 };
 
-const Lista = () => (
-  <ScrollView>
-    <Text style={{ fontSize: 96 }}>Scroll me plz</Text>
-    <Image source={logo} />
-    <Image source={logo} />
-    <Image source={logo} />
-    <Image source={logo} />
-    <Image source={logo} />
-    <Text style={{ fontSize: 96 }}>If you like</Text>
-    <Image source={logo} />
-    <Image source={logo} />
-    <Image source={logo} />
-    <Image source={logo} />
-    <Image source={logo} />
-  </ScrollView>
-); 
+
 
 const currencies = [
   {value: 'USD',
@@ -57,12 +42,8 @@ const currencies = [
 
 export default class Gastos extends React.Component{
 
-  
- 
       render(){
-
-        
-                
+      
         return (
         
         <Box component="form" sx={{
@@ -90,8 +71,24 @@ export default class Gastos extends React.Component{
 
             </div>
 
-            </Box>
-   
+            <div>
+              <ScrollView>
+                <Text style={{ fontSize: 96 }}>Scroll me plz</Text>
+                <Image source={logo} />
+                <Image source={logo} />
+                <Image source={logo} />
+                <Image source={logo} />
+                <Image source={logo} />
+                <Text style={{ fontSize: 96 }}>If you like</Text>
+                <Image source={logo} />
+                <Image source={logo} />
+                <Image source={logo} />
+                <Image source={logo} />
+                <Image source={logo} />
+              </ScrollView>
+            </div>
+        </Box>
+
                 );  
         }
   }
