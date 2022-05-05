@@ -41,7 +41,7 @@ export default class Gastos extends React.Component{
         return (
         
         <Box component="form" sx={{
-        '& > :not(style)': { m: 1, width: '25ch' },
+        '& > :not(style)': {  width: '25ch' },
       }}noValidate autoComplete="off">
 
         <div className="fondoG">
@@ -66,13 +66,13 @@ export default class Gastos extends React.Component{
         </div>
 
         <div className="lista">     
-            <ScrollView>
-                <Text>
+            
+                <div>
                     Aquí irían los datos de las transacciones:
-                </Text>
+                </div>
         
         
-                <Text>
+                <div>
                     Un soneto me manda hacer Violante
                     que en mi vida me he visto en tanto aprieto;
                     catorce versos dicen que es soneto;
@@ -90,8 +90,8 @@ export default class Gastos extends React.Component{
                     Ya estoy en el segundo, y aun sospecho
                     que voy los trece versos acabando;
                     contad si son catorce, y está hecho.
-                </Text>
-              </ScrollView>
+                </div>
+              
           </div>
             
         </Box>
