@@ -1,14 +1,16 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+
 import styles from './Estilos.css';
 import '../App.css';
 
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
-import MenuItem from '@mui/material/MenuItem';
 
-import { Text, ScrollView } from 'react-native';
+
+import ListaDesplegable from './ListaDesplegable';
+
+
 
 
 function App() {
@@ -18,7 +20,7 @@ function App() {
 }
 
 
-const currencies = [
+/*const currencies = [
   {value: 'USD',
     label: '$',
   },
@@ -31,7 +33,8 @@ const currencies = [
   {value: 'JPY',
     label: '¥',
   },
-];
+];*/
+
 
 
 export default class Gastos extends React.Component{
@@ -41,7 +44,7 @@ export default class Gastos extends React.Component{
         return (
         
         <Box component="form" sx={{
-        '& > :not(style)': {  width: '25ch' },
+        '& > :not(style)': { m:1,  width: '25ch' },
       }}noValidate autoComplete="off">
 
         <div className="fondoG">
@@ -59,7 +62,8 @@ export default class Gastos extends React.Component{
                 <h2>Fecha: </h2>
                 
                 <h2>Moneda: </h2>
-
+                <ListaDesplegable/>
+  
                 <Button className="guardar" variant="contained" color="success">Guardar</Button>
                 <Button variant="contained" color="error">Cancelar</Button>
 
@@ -100,4 +104,3 @@ export default class Gastos extends React.Component{
         }
   }
 
-  
