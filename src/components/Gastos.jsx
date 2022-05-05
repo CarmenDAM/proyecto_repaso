@@ -67,12 +67,12 @@ export default class Gastos extends React.Component{
 
         <div className="lista">     
             
-                <div>
+                <p>
                     Aquí irían los datos de las transacciones:
-                </div>
+                </p>
         
         
-                <div>
+                <p>
                     Un soneto me manda hacer Violante
                     que en mi vida me he visto en tanto aprieto;
                     catorce versos dicen que es soneto;
@@ -90,7 +90,7 @@ export default class Gastos extends React.Component{
                     Ya estoy en el segundo, y aun sospecho
                     que voy los trece versos acabando;
                     contad si son catorce, y está hecho.
-                </div>
+                </p>
               
           </div>
             
