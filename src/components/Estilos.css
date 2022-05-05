@@ -34,17 +34,34 @@ body {
     margin-left: 5px;
   }
 
-  /*.guardar{
-    margin-right:0px !important;
-  }*/
 
   Button{
     margin-left:5px !important;
+    margin-top:25px !important;
+    margin-bottom:25px !important;
   }
 
   .lista{
     height: 200px !important;
     overflow:auto;
+  }
+
+  #cantidad{
+    margin-left:200px !important;
+    text-align: left !important;
+  
+  }
+
+  #tipo{
+    margin-left:200px !important;
+    text-align: left !important;
+  
+  }
+
+  #descripcion{
+    margin-left:200px !important;
+    text-align: left !important;
+  
   }
 
   .btn-gastos {

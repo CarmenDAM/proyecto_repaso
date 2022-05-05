@@ -44,7 +44,7 @@ export default class Gastos extends React.Component{
         return (
         
         <Box component="form" sx={{
-        '& > :not(style)': { m:1,  width: '25ch' },
+        '& > :not(style)': { m:1,  width: '45ch' },
       }}noValidate autoComplete="off">
 
         <div className="fondoG">
@@ -57,7 +57,7 @@ export default class Gastos extends React.Component{
                 <TextField id="tipo" label="Tipo" variant="standard" />
 
                 <h2>Descripción: </h2>
-                <TextField id="descripción" label="Descripción" variant="standard" />
+                <TextField id="descripcion" label="Descripción" variant="standard" />
 
                 <h2>Fecha: </h2>
                 
