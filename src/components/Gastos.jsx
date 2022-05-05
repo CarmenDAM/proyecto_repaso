@@ -9,31 +9,7 @@ import Box from '@mui/material/Box';
 
 
 import ListaDesplegable from './ListaDesplegable';
-
-
-
-
-function App() {
-  return <Button variant="contained">Hello World</Button>,
-         <Button variant="contained">Hello World</Button>;
-         
-}
-
-
-/*const currencies = [
-  {value: 'USD',
-    label: '$',
-  },
-  {value: 'EUR',
-    label: '€',
-  },
-  {value: 'BTC',
-    label: '฿',
-  },
-  {value: 'JPY',
-    label: '¥',
-  },
-];*/
+import Calendario from './Calendario';
 
 
 
@@ -60,6 +36,7 @@ export default class Gastos extends React.Component{
                 <TextField id="descripcion" label="Descripción" variant="standard" />
 
                 <h2>Fecha: </h2>
+                <Calendario/>
                 
                 <h2>Moneda: </h2>
                 <ListaDesplegable/>
