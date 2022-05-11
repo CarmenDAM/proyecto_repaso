@@ -31,13 +31,19 @@ export default function MaterialUIPickers() {
   const handleChange = (newValue) => {
     setValue(newValue);
   };
-}
 
-  function App({ children }) {
 
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
-      {children}
+      <Stack spacing={3}>
+        <DesktopDatePicker
+          label="Date desktop"
+          inputFormat="MM/dd/yyyy"
+          value={value}
+          onChange={handleChange}
+          renderInput={(params) => <TextField {...params} />}
+        />
+        </Stack>
     </LocalizationProvider>
   );
 }

@@ -24,16 +24,10 @@ export default class Gastos extends React.Component{
 
       render(){
 
-        function MaterialUIPickers() {
-                const [value, setValue] = React.useState(new Date('2014-08-18T21:11:54'));
-              
-                const handleChange = (newValue) => {
-                  setValue(newValue);
-                };
-        }
+        
         
         return (
-   
+                function App({ children }) {
         
         <Box component="form" sx={{
         '& > :not(style)': { m:1,  width: '45ch' },
@@ -53,16 +47,8 @@ export default class Gastos extends React.Component{
 
                 <h2>Fecha: </h2>
                 <LocalizationProvider dateAdapter={AdapterDateFns}>
-      <Stack spacing={3}>
-        <DesktopDatePicker
-          label="Date desktop"
-          inputFormat="MM/dd/yyyy"
-          value={value}
-          onChange={handleChange}
-          renderInput={(params) => <TextField {...params} />}
-        />
-        </Stack>
-    </LocalizationProvider>
+                  {children}
+                </LocalizationProvider>
                 
                 <h2>Moneda: </h2>
                 <ListaDesplegable/>
@@ -102,8 +88,10 @@ export default class Gastos extends React.Component{
           </div>
             
         </Box>
+                }
 
                 );  
         }
   }
+
 
