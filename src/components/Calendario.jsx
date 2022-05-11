@@ -25,25 +25,13 @@ import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
 //import DatePicker from '@mui/x-date-pickers/DatePicker';
 
  
-export default function MaterialUIPickers() {
-  const [value, setValue] = React.useState(new Date('2014-08-18T21:11:54'));
-
-  const handleChange = (newValue) => {
-    setValue(newValue);
-  };
+export default function App({ children }) {
 
 
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
-      <Stack spacing={3}>
-        <DesktopDatePicker
-          label="Date desktop"
-          inputFormat="MM/dd/yyyy"
-          value={value}
-          onChange={handleChange}
-          renderInput={(params) => <TextField {...params} />}
-        />
-        </Stack>
+        {children}
     </LocalizationProvider>
+    
   );
 }
