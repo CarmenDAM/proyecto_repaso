@@ -11,13 +11,29 @@ import Box from '@mui/material/Box';
 import ListaDesplegable from './ListaDesplegable';
 import Calendario from './Calendario';
 
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
+import Stack from '@mui/material/Stack';
+
+import MaterialUIPickers from './Calendario'
+
 
 
 export default class Gastos extends React.Component{
 
       render(){
+
+        function MaterialUIPickers() {
+                const [value, setValue] = React.useState(new Date('2014-08-18T21:11:54'));
+              
+                const handleChange = (newValue) => {
+                  setValue(newValue);
+                };
+        }
         
         return (
+   
         
         <Box component="form" sx={{
         '& > :not(style)': { m:1,  width: '45ch' },
@@ -36,7 +52,17 @@ export default class Gastos extends React.Component{
                 <TextField id="descripcion" label="Descripción" variant="standard" />
 
                 <h2>Fecha: </h2>
-                <Calendario/>
+                <LocalizationProvider dateAdapter={AdapterDateFns}>
+      <Stack spacing={3}>
+        <DesktopDatePicker
+          label="Date desktop"
+          inputFormat="MM/dd/yyyy"
+          value={value}
+          onChange={handleChange}
+          renderInput={(params) => <TextField {...params} />}
+        />
+        </Stack>
+    </LocalizationProvider>
                 
                 <h2>Moneda: </h2>
                 <ListaDesplegable/>
