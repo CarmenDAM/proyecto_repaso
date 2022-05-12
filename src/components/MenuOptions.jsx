@@ -2,7 +2,7 @@ import React from "react";
 import uuid from "react-uuid";
 import { Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { PaginasApp } from "../data/PaginasApp";
+import { PaginasApp } from "./PaginasApp";
 
 export default function MenuOptions(props) {
   return (

@@ -5,7 +5,7 @@ import Boton from './Boton';
 import { Navbar, Offcanvas, Container, Nav } from 'react-bootstrap';
 import { BOOTSTRAP_LG_SIZE } from '../data/Constants';
 
-import './navigation.css';
+import './Navigation.css';
 
 export default function Navigation(props) {
 
