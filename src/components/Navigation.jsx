@@ -4,7 +4,7 @@ import MenuOptions from './MenuOptions';
 import Boton from './Boton';
 import { Navbar, Offcanvas, Container, Nav } from 'react-bootstrap';
 import { BOOTSTRAP_LG_SIZE } from '../data/Constants';
-import logo from '../assets/images/logo.png';
+
 import './navigation.css';
 
 export default function Navigation(props) {
@@ -69,12 +69,7 @@ export default function Navigation(props) {
       <Navbar bg="light" expand={false}>
         <Container fluid>
           <Navbar.Brand href="#">
-            <img
-              className="logo-image"
-              src={logo}
-              width="50px"
-              alt="logo"
-            />
+            
             Examen react
           </Navbar.Brand>
           {options}

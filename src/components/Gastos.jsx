@@ -16,7 +16,7 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
 import Stack from '@mui/material/Stack';
 
-import App from './Calendario'
+//import App from './Calendario'
 
 
 
@@ -26,13 +26,30 @@ export default class Gastos extends React.Component{
 
         return (
                 
-        function MaterialUIPickers() {
+        /*function MaterialUIPickers() {
         const [value, setValue] = React.useState(new Date('2014-08-18T21:11:54'));
                               
         const handleChange = (newValue) => {
         setValue(newValue);
-        };
-        
+        };*/
+
+
+        //ESTO VA EN "Fecha:"
+        /*
+        <LocalizationProvider dateAdapter={AdapterDateFns}>
+                   <Stack spacing={3}>
+                     <DesktopDatePicker
+                        label="Date desktop"
+                        inputFormat="MM/dd/yyyy"
+                        value={value}
+                        onChange={handleChange}
+                        renderInput={(params) => <TextField {...params} />}
+                     />
+                   </Stack>
+                </LocalizationProvider>
+        */
+
+
         <Box component="form" sx={{
         '& > :not(style)': { m:1,  width: '45ch' },
       }}noValidate autoComplete="off">
@@ -50,17 +67,7 @@ export default class Gastos extends React.Component{
                 <TextField id="descripcion" label="Descripción" variant="standard" />
 
                 <h2>Fecha: </h2>
-                <LocalizationProvider dateAdapter={AdapterDateFns}>
-                   <Stack spacing={3}>
-                     <DesktopDatePicker
-                        label="Date desktop"
-                        inputFormat="MM/dd/yyyy"
-                        value={value}
-                        onChange={handleChange}
-                        renderInput={(params) => <TextField {...params} />}
-                     />
-                   </Stack>
-                </LocalizationProvider>
+                
                 
                 <h2>Moneda: </h2>
                 <ListaDesplegable/>
@@ -100,7 +107,7 @@ export default class Gastos extends React.Component{
           </div>
             
         </Box>
-                }
+                
 
                 );  
         }
