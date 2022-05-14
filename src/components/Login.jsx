@@ -22,18 +22,18 @@ export default function Login(){
 
   return (
     <>
-     <h1>Inicio de sesión - Test App</h1>
+     <h1>Inicio de sesión</h1>
       <Container>
         <Form>
           <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Nombre de usuario</Form.Label>
+            <Form.Label>Nombre de usuario: </Form.Label>
             <Form.Control ref={nameInput} type="text" placeholder="Usuario" />
             <Form.Text className="text-muted">
-              Su email no será compartido con nadie
+               Su email no será compartido con nadie
             </Form.Text>
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label>Contraseña</Form.Label>
+            <Form.Label>Contraseña: </Form.Label>
             <Form.Control ref={pwdInput} type="password" placeholder="Contraseña" />
             </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicCheckbox">
