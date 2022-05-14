@@ -4,11 +4,11 @@ export const Users= [
       password: "pepe"
     },
     {
-      name: "pedro",
-      password: "jose"
+      name: "carmen",
+      password: "123"
     },
     {
-      name: "maria",
-      password: "lopez"
+      name: "user",
+      password: "user"
     },
   ]
