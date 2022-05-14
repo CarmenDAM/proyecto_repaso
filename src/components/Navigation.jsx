@@ -69,10 +69,7 @@ export default function Navigation(props) {
       <Navbar bg="light" expand={false}>
         <Container fluid>
           <Navbar.Brand href="#">
-            
-            Examen react
           </Navbar.Brand>
-          {options}
         </Container>
       </Navbar>
     );
