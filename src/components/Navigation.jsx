@@ -28,17 +28,23 @@ export default function Navigation(props) {
   const generateMenu = () => {
     if (width < BOOTSTRAP_LG_SIZE) {
       return (
-
+        <>
+          
+          
+            
             <Offcanvas.Body>
               <Nav>
+                <MenuOptions baseUrl={props.baseUrl} />
                 <Boton text="Logout" onClickButton={logout} />
               </Nav>
             </Offcanvas.Body>
-
+          
+        </>
       );
     } else {
       return (
-        <Nav className="justify-content-end nav-expanded">
+        <Nav>
+          
           <Boton text="Logout" onClickButton={logout} />
         </Nav>
       );
