@@ -12,11 +12,17 @@ export default class Gastos extends React.Component{
   constructor(props) {
     super(props);
     this.campoCantidad = React.createRef("");
+    this.campoTipo = React.createRef("");
+    this.campoDescripcion = React.createRef("");
+    this.campoFecha = React.createRef("");
     
   }
 
   lecturaValor() {
-    console.log("Cantidad introducida: " + this.campoCantidad.current.value)
+    console.log("Cantidad introducida: " + this.campoCantidad.current.value);
+    console.log("Tipo introducido: " + this.campoTipo.current.value);
+    console.log("Descripcion introducida: " + this.campoDescripcion.current.value);
+    console.log("Fecha introducida: " + this.campoFecha.current.value);
   }
 
       render(){
