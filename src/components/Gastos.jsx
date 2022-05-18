@@ -9,6 +9,16 @@ import ListaDesplegable from './ListaDesplegable';
 
 export default class Gastos extends React.Component{
 
+  constructor(props) {
+    super(props);
+    this.campoCantidad = React.createRef("");
+    
+  }
+
+  lecturaValor() {
+    console.log("Cantidad introducida: " + this.campoCantidad.current.value)
+  }
+
       render(){
 
         return (
@@ -42,10 +52,11 @@ export default class Gastos extends React.Component{
       }}noValidate autoComplete="off">
 
         <div className="fondoG">
+         
                 <h1 className="colorGastos">- GASTOS -</h1>
 
                 <h2>Cantidad: </h2>
-                <TextField id="cantidadG" label="Cantidad" variant="standard" />
+                <TextField id="cantidadG" label="Cantidad" variant="standard" inputRef={this.campoCantidad}/>
                 
                 <h2>Tipo: </h2>
                 <TextField id="tipoG" label="Tipo" variant="standard" />
@@ -59,7 +70,7 @@ export default class Gastos extends React.Component{
                 <h2>Moneda: </h2>
                 <ListaDesplegable/>
   
-                <Button className="guardar" variant="contained" color="success">Guardar</Button>
+                <Button className="guardar" variant="contained" color="success" type="button" onClick={this.lecturaValor.bind(this)}>Guardar</Button>
                 <Button variant="contained" color="error">Cancelar</Button>
 
         </div>
@@ -69,7 +80,12 @@ export default class Gastos extends React.Component{
                 <p>
                     Aquí irían los datos de las transacciones:
                 </p>
-        
+
+                
+
+                  this.state.lecturaValor;
+
+              
         
                 <p>
                     Un soneto me manda hacer Violante
