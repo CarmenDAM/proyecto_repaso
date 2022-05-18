@@ -1,0 +1,49 @@
+body {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 40px;
+    font-family: Arial;
+    text-align: center;
+  }
+
+.fondoT{
+    background-color: #acf3ff!important;
+  }
+
+  .btn-transacciones {
+    background-color: #87bdfc!important;
+  }
+
+
+  .lista{
+    height: 200px !important;
+    overflow:auto;
+  }
+
+  #cantidadT{
+    margin-left:200px !important;
+    text-align: left !important;
+  
+  }
+
+  #tipoT{
+    margin-left:200px !important;
+    text-align: left !important;
+  
+  }
+
+  #descripcionT{
+    margin-left:200px !important;
+    text-align: left !important;
+  
+  }
+
+  #fechaT{
+    margin-left:200px !important;
+    text-align: left !important;
+  
+  }
+
+  .colorTransacciones {
+    color: rgb(81, 136, 240);
+  }

@@ -1,0 +1,60 @@
+
+body {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 40px;
+    font-family: Arial;
+    text-align: center;
+  }
+
+  .colorGastos {
+    color: rgb(228, 78, 110);
+  }
+
+#cantidadG{
+    margin-left:200px !important;
+    text-align: left !important;
+  
+  }
+
+  #tipoG{
+    margin-left:200px !important;
+    text-align: left !important;
+  
+  }
+
+  #descripcionG{
+    margin-left:200px !important;
+    text-align: left !important;
+  
+  }
+
+  #fechaG{
+    margin-left:200px !important;
+    text-align: left !important;
+  
+  }
+
+  h1 {
+    padding: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    font-size: 100;
+  }
+
+  h2 {
+    padding: 1px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: left;
+    font-size: 70;
+    margin-left: 5px;
+  }
+
+  .btn-gastos {
+    background-color: #ff8282!important;
+  }
+
+  .fondoG{
+    background-color: #ffacac!important;
+  }
+

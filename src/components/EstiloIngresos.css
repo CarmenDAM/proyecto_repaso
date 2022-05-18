@@ -1,0 +1,50 @@
+
+body {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 40px;
+    font-family: Arial;
+    text-align: center;
+  }
+  
+.fondoI{
+    background-color: #b6ffac!important;
+  }
+
+  .btn-ingresos {
+    background-color: #8cff8c!important;
+  }
+
+
+  .lista{
+    height: 200px !important;
+    overflow:auto;
+  }
+
+  #cantidadI{
+    margin-left:200px !important;
+    text-align: left !important;
+  
+  }
+
+  #tipoI{
+    margin-left:200px !important;
+    text-align: left !important;
+  
+  }
+
+  #descripcionI{
+    margin-left:200px !important;
+    text-align: left !important;
+  
+  }
+
+  #fechaI{
+    margin-left:200px !important;
+    text-align: left !important;
+  
+  }
+
+  .colorIngresos {
+    color: rgb(113, 228, 84);
+  }

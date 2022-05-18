@@ -1,24 +1,11 @@
 import React from 'react';
-
 import styles from './Estilos.css';
 import '../App.css';
-
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
-
-
+import './EstiloGastos.css';
 import ListaDesplegable from './ListaDesplegable';
-import Calendario from './Calendario';
-
-import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
-import Stack from '@mui/material/Stack';
-
-//import App from './Calendario'
-
-
 
 export default class Gastos extends React.Component{
 
@@ -58,16 +45,16 @@ export default class Gastos extends React.Component{
                 <h1 className="colorGastos">- GASTOS -</h1>
 
                 <h2>Cantidad: </h2>
-                <TextField id="cantidad" label="Cantidad" variant="standard" />
+                <TextField id="cantidadG" label="Cantidad" variant="standard" />
                 
                 <h2>Tipo: </h2>
-                <TextField id="tipo" label="Tipo" variant="standard" />
+                <TextField id="tipoG" label="Tipo" variant="standard" />
 
                 <h2>Descripción: </h2>
-                <TextField id="descripcion" label="Descripción" variant="standard" />
+                <TextField id="descripcionG" label="Descripción" variant="standard" />
 
                 <h2>Fecha: </h2>
-                <TextField id="fecha" label="Fecha" variant="standard" />
+                <TextField id="fechaG" label="Fecha" variant="standard" />
                 
                 <h2>Moneda: </h2>
                 <ListaDesplegable/>
