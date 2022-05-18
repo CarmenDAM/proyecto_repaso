@@ -1,4 +1,4 @@
-import Gastos from './Gastos';
+/*import Gastos from './Gastos';
 import Ingresos from './Ingresos';
 import Transacciones from './Transacciones';
 
@@ -21,5 +21,5 @@ export const PaginasApp = [
       title: 'Transacciones',
       component: Transacciones
     },
-  ];
+  ];*/
   

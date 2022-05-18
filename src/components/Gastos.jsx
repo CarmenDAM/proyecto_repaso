@@ -67,7 +67,7 @@ export default class Gastos extends React.Component{
                 <TextField id="descripcion" label="Descripción" variant="standard" />
 
                 <h2>Fecha: </h2>
-                
+                <TextField id="fecha" label="Fecha" variant="standard" />
                 
                 <h2>Moneda: </h2>
                 <ListaDesplegable/>
