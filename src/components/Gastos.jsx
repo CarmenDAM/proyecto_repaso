@@ -15,7 +15,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
-export default class Gastos extends React.Component{
+export default class Gastos extends React.Component {
 
   constructor(props) {
     super(props);
@@ -23,100 +23,95 @@ export default class Gastos extends React.Component{
     this.campoTipo = React.createRef("");
     this.campoDescripcion = React.createRef("");
     this.campoFecha = React.createRef("");
-    this.state={listaGastos: []};
+    this.state = { listaGastos: [] };
   }
 
   lecturaValor() {
-    
-    let listaActual=this.state.listaGastos;
+
+    let listaActual = this.state.listaGastos;
     listaActual.push({
-      cantidad: this.campoCantidad.current.value, 
-      tipo: this.campoTipo.current.value, 
-      descripcion: this.campoDescripcion.current.value, 
+      cantidad: this.campoCantidad.current.value,
+      tipo: this.campoTipo.current.value,
+      descripcion: this.campoDescripcion.current.value,
       fecha: this.campoFecha.current.value
     });
-    this.setState({listaGastos: listaActual});
+    this.setState({ listaGastos: listaActual });
     console.log(listaActual);
-
-    console.log("Cantidad introducida: " + this.campoCantidad.current.value);
-    console.log("Tipo introducido: " + this.campoTipo.current.value);
-    console.log("Descripcion introducida: " + this.campoDescripcion.current.value);
-    console.log("Fecha introducida: " + this.campoFecha.current.value);
 
   }
 
-      render(){
+  render() {
 
-        return (
-      
+    return (
 
-        <Box component="form" sx={{
+
+      <Box component="form" noValidate autoComplete="off">
+        {/*sx={{
         '& > :not(style)': { m:1,  width: '45ch' },
-      }}noValidate autoComplete="off">
-
+      }}*/}
         <div className="fondoG">
-         
-                <h1 className="colorGastos">- GASTOS -</h1>
 
-                <h2>Cantidad: </h2>
-                <TextField id="cantidadG" label="Cantidad" variant="standard" inputRef={this.campoCantidad}/>
-                
-                <h2>Tipo: </h2>
-                <TextField id="tipoG" label="Tipo" variant="standard" inputRef={this.campoTipo}/>
+          <h1 className="colorGastos">- GASTOS -</h1>
 
-                <h2>Descripción: </h2>
-                <TextField id="descripcionG" label="Descripción" variant="standard" inputRef={this.campoDescripcion}/>
+          <h2>Cantidad: </h2>
+          <TextField id="cantidadG" label="Cantidad" variant="standard" inputRef={this.campoCantidad} />
 
-                <h2>Fecha: </h2>
-                <TextField id="fechaG" label="Fecha" variant="standard" inputRef={this.campoFecha}/>
-                
-                <h2>Moneda: </h2>
-                <ListaDesplegable/>
-  
-                <Button className="guardar" variant="contained" color="success" type="button" onClick={this.lecturaValor.bind(this)}>Guardar</Button>
-                <Button variant="contained" color="error">Cancelar</Button>
+          <h2>Tipo: </h2>
+          <TextField id="tipoG" label="Tipo" variant="standard" inputRef={this.campoTipo} />
+
+          <h2>Descripción: </h2>
+          <TextField id="descripcionG" label="Descripción" variant="standard" inputRef={this.campoDescripcion} />
+
+          <h2>Fecha: </h2>
+          <TextField id="fechaG" label="Fecha" variant="standard" inputRef={this.campoFecha} />
+
+          <h2>Moneda: </h2>
+          <ListaDesplegable />
+
+          <Button className="guardar" variant="contained" color="success" type="button" onClick={this.lecturaValor.bind(this)}>Guardar</Button>
+          <Button variant="contained" color="error">Cancelar</Button>
 
         </div>
 
-        <div className="lista">     
-            
-                <p>Lista de gastos:</p>
+        <div className="lista">
 
-                        <TableContainer component={Paper}>
-                        <Table sx={{ minWidth: 650 }} aria-label="simple table">
-                          <TableHead>
-                            <TableRow>
-                              <TableCell>Cantidad</TableCell>
-                              <TableCell align="right">Tipo</TableCell>
-                              <TableCell align="right">Descripción</TableCell>
-                              <TableCell align="right">Fecha</TableCell>
-                            </TableRow>
-                          </TableHead>
-                          <TableBody>
+          <p>Lista de gastos:</p>
 
-                            {this.state.listaGastos.map((elemento) => (
-                              <TableRow
-                                key={elemento.name}
-                                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                              >
-                                <TableCell component="th" scope="row">{elemento.cantidad}</TableCell>
-                                <TableCell align="right">{elemento.tipo}</TableCell>
-                                <TableCell align="right">{elemento.descripcion}</TableCell>
-                                <TableCell align="right">{elemento.fecha}</TableCell>
-                              </TableRow>
-                            ))}
-                          </TableBody>
-                        </Table>
-                      </TableContainer>
+          <TableContainer component={Paper}>
+            <Table sx={{ minWidth: 650 }} aria-label="simple table">
+              <TableHead>
+                <TableRow>
+                  <TableCell>Cantidad</TableCell>
+                  <TableCell align="right">Tipo</TableCell>
+                  <TableCell align="right">Descripción</TableCell>
+                  <TableCell align="right">Fecha</TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
 
- 
-          </div>
-            
-        </Box>
-                
+                {this.state.listaGastos.map((elemento) => (
+                  <TableRow
+                    key={elemento.name}
+                    sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                  >
+                    <TableCell component="th" scope="row">{elemento.cantidad}</TableCell>
+                    <TableCell align="right">{elemento.tipo}</TableCell>
+                    <TableCell align="right">{elemento.descripcion}</TableCell>
+                    <TableCell align="right">{elemento.fecha}</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </TableContainer>
 
-                );  
-        }
+
+        </div>
+
+      </Box>
+
+
+    );
   }
+}
 
 
