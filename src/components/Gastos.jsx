@@ -7,6 +7,14 @@ import Box from '@mui/material/Box';
 import './EstiloGastos.css';
 import ListaDesplegable from './ListaDesplegable';
 
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
+
 export default class Gastos extends React.Component{
 
   constructor(props) {
@@ -21,7 +29,12 @@ export default class Gastos extends React.Component{
   lecturaValor() {
     
     let listaActual=this.state.listaGastos;
-    listaActual.push(this.campoCantidad.current.value, this.campoTipo.current.value, this.campoDescripcion.current.value, this.campoFecha.current.value);
+    listaActual.push({
+      cantidad: this.campoCantidad.current.value, 
+      tipo: this.campoTipo.current.value, 
+      descripcion: this.campoDescripcion.current.value, 
+      fecha: this.campoFecha.current.value
+    });
     this.setState({listaGastos: listaActual});
     console.log(listaActual);
 
@@ -35,30 +48,7 @@ export default class Gastos extends React.Component{
       render(){
 
         return (
-                
-        /*function MaterialUIPickers() {
-        const [value, setValue] = React.useState(new Date('2014-08-18T21:11:54'));
-                              
-        const handleChange = (newValue) => {
-        setValue(newValue);
-        };*/
-
-
-        //ESTO VA EN "Fecha:"
-        /*
-        <LocalizationProvider dateAdapter={AdapterDateFns}>
-                   <Stack spacing={3}>
-                     <DesktopDatePicker
-                        label="Date desktop"
-                        inputFormat="MM/dd/yyyy"
-                        value={value}
-                        onChange={handleChange}
-                        renderInput={(params) => <TextField {...params} />}
-                     />
-                   </Stack>
-                </LocalizationProvider>
-        */
-
+      
 
         <Box component="form" sx={{
         '& > :not(style)': { m:1,  width: '45ch' },
@@ -90,46 +80,36 @@ export default class Gastos extends React.Component{
 
         <div className="lista">     
             
-                <p>
-                    Aquí irían los datos de las transacciones:
-                </p>
+                <p>Lista de gastos:</p>
 
-                                  
-                  {this.state.listaGastos.map( 
-                    function muestraCantidad(elemento) {
-                      return (
-                        <div>Cantidad: {elemento}</div>,
-                        <div>Tipo: {elemento}</div>,
-                        <div>Descripción: {elemento}</div>,
-                        <div>Fecha: {elemento}</div>
-                      );
-                    }
-                    )
-                  
-                  }
+                        <TableContainer component={Paper}>
+                        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                          <TableHead>
+                            <TableRow>
+                              <TableCell>Cantidad</TableCell>
+                              <TableCell align="right">Tipo</TableCell>
+                              <TableCell align="right">Descripción</TableCell>
+                              <TableCell align="right">Fecha</TableCell>
+                            </TableRow>
+                          </TableHead>
+                          <TableBody>
 
-              
-        
-                <p>
-                    Un soneto me manda hacer Violante
-                    que en mi vida me he visto en tanto aprieto;
-                    catorce versos dicen que es soneto;
-                    burla burlando van los tres delante.
+                            {this.state.listaGastos.map((elemento) => (
+                              <TableRow
+                                key={elemento.name}
+                                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                              >
+                                <TableCell component="th" scope="row">{elemento.cantidad}</TableCell>
+                                <TableCell align="right">{elemento.tipo}</TableCell>
+                                <TableCell align="right">{elemento.descripcion}</TableCell>
+                                <TableCell align="right">{elemento.fecha}</TableCell>
+                              </TableRow>
+                            ))}
+                          </TableBody>
+                        </Table>
+                      </TableContainer>
 
-                    Yo pensé que no hallara consonante,
-                    y estoy a la mitad de otro cuarteto;
-                    mas si me veo en el primer terceto,
-                    no hay cosa en los cuartetos que me espante.
-
-                    Por el primer terceto voy entrando,
-                    y parece que entré con pie derecho,
-                    pues fin con este verso le voy dando.
-
-                    Ya estoy en el segundo, y aun sospecho
-                    que voy los trece versos acabando;
-                    contad si son catorce, y está hecho.
-                </p>
-              
+ 
           </div>
             
         </Box>
