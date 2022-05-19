@@ -15,10 +15,14 @@ export default class Gastos extends React.Component{
     this.campoTipo = React.createRef("");
     this.campoDescripcion = React.createRef("");
     this.campoFecha = React.createRef("");
-    
+    this.state={listaGastos: []};
   }
 
   lecturaValor() {
+    let listaActual=this.state.listaGastos;
+    listaActual.push(this.campoCantidad.current.value);
+    this.setState({listaGastos: listaActual});
+    console.log(listaActual);
     console.log("Cantidad introducida: " + this.campoCantidad.current.value);
     console.log("Tipo introducido: " + this.campoTipo.current.value);
     console.log("Descripcion introducida: " + this.campoDescripcion.current.value);
@@ -89,7 +93,13 @@ export default class Gastos extends React.Component{
 
                 
 
-                  this.state.lecturaValor;
+                  {this.state.listaGastos.map( 
+                    function muestraCantidad(elemento) {
+                      return (<div>Cantidad: {elemento}</div>);
+                    }
+                    )
+                  
+                  }
 
               
         
