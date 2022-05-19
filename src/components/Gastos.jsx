@@ -19,14 +19,17 @@ export default class Gastos extends React.Component{
   }
 
   lecturaValor() {
+    
     let listaActual=this.state.listaGastos;
-    listaActual.push(this.campoCantidad.current.value);
+    listaActual.push(this.campoCantidad.current.value, this.campoTipo.current.value, this.campoDescripcion.current.value, this.campoFecha.current.value);
     this.setState({listaGastos: listaActual});
     console.log(listaActual);
+
     console.log("Cantidad introducida: " + this.campoCantidad.current.value);
     console.log("Tipo introducido: " + this.campoTipo.current.value);
     console.log("Descripcion introducida: " + this.campoDescripcion.current.value);
     console.log("Fecha introducida: " + this.campoFecha.current.value);
+
   }
 
       render(){
@@ -69,13 +72,13 @@ export default class Gastos extends React.Component{
                 <TextField id="cantidadG" label="Cantidad" variant="standard" inputRef={this.campoCantidad}/>
                 
                 <h2>Tipo: </h2>
-                <TextField id="tipoG" label="Tipo" variant="standard" />
+                <TextField id="tipoG" label="Tipo" variant="standard" inputRef={this.campoTipo}/>
 
                 <h2>Descripción: </h2>
-                <TextField id="descripcionG" label="Descripción" variant="standard" />
+                <TextField id="descripcionG" label="Descripción" variant="standard" inputRef={this.campoDescripcion}/>
 
                 <h2>Fecha: </h2>
-                <TextField id="fechaG" label="Fecha" variant="standard" />
+                <TextField id="fechaG" label="Fecha" variant="standard" inputRef={this.campoFecha}/>
                 
                 <h2>Moneda: </h2>
                 <ListaDesplegable/>
@@ -91,11 +94,15 @@ export default class Gastos extends React.Component{
                     Aquí irían los datos de las transacciones:
                 </p>
 
-                
-
+                                  
                   {this.state.listaGastos.map( 
                     function muestraCantidad(elemento) {
-                      return (<div>Cantidad: {elemento}</div>);
+                      return (
+                        <div>Cantidad: {elemento}</div>,
+                        <div>Tipo: {elemento}</div>,
+                        <div>Descripción: {elemento}</div>,
+                        <div>Fecha: {elemento}</div>
+                      );
                     }
                     )
                   
