@@ -93,3 +93,15 @@ body {
   .fondoT{
     background-color: #acf3ff!important;
   }
+
+  .colorCM {
+    color: rgb(175, 175, 175);
+  }
+
+  .btn-cambioMoneda {
+    background-color: #d1d1d1!important;
+  }
+
+  .fondoCM{
+    background-color: #d1d1d1!important;
+  }

@@ -1,0 +1,36 @@
+body {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 40px;
+    font-family: Arial;
+    text-align: left;
+  }
+
+  .colorCM {
+    color: rgb(175, 175, 175);
+  }
+
+
+  h1 {
+    padding: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    font-size: 100;
+  }
+
+  h2 {
+    padding: 1px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: left;
+    font-size: 70;
+    margin-left: 5px;
+  }
+
+  .btn-cambioMoneda {
+    background-color: #d1d1d1!important;
+  }
+
+  .fondoCM{
+    background-color: #d1d1d1!important;
+  }
+

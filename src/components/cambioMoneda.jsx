@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Estilos.css';
+import './EstiloCambioMoneda.css';
 import './script';
 
 
