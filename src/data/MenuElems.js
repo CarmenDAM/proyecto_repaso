@@ -63,6 +63,14 @@ const MenuElems = [
         text: "Transacciones",
         componentSite: <Transacciones/>,
         class:"btn-transacciones"
+    },
+
+    {
+        path: "/cambioMoneda",
+        defaultRoute:false,
+        text: "Cambio de Moneda",
+        componentSite: <cambioMoneda/>,
+        class:"btn-cambioMoneda"
     }
 
 ];

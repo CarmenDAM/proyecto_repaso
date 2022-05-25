@@ -1,6 +1,7 @@
 {
   "name": "proyecto_repaso",
   "version": "0.1.0",
+  "homepage":"https://CarmenDAM.github.io/proyecto_repaso",
   "private": true,
   "dependencies": {
     "@babel/runtime": "^7.17.9",
@@ -52,5 +53,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }
