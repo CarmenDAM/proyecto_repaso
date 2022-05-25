@@ -1,5 +1,7 @@
 import './style.css';
 import '../.index.html';
+import './Estilos.css';
+
 
 //https://es.acervolima.com/conversor-de-divisas-en-javascript/
 
