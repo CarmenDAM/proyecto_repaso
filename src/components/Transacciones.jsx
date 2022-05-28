@@ -4,98 +4,117 @@ import '../App.css';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
-import './EstiloTransacciones.css';
+import './EstiloIngresos.css';
 import ListaDesplegable from './ListaDesplegable';
 
-export default class Gastos extends React.Component{
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
 
-      render(){
+export default class Transacciones extends React.Component {
 
-        return (
-                
-        /*function MaterialUIPickers() {
-        const [value, setValue] = React.useState(new Date('2014-08-18T21:11:54'));
-                              
-        const handleChange = (newValue) => {
-        setValue(newValue);
-        };*/
+  constructor(props) {
+    super(props);
+    this.campoCantidad = React.createRef("");
+    this.campoTipo = React.createRef("");
+    this.campoDescripcion = React.createRef("");
+    this.campoFecha = React.createRef("");
+    this.state = { listaTransacciones: [] };
+  }
+
+  lecturaValor() {
+
+    let listaActual = this.state.listaTransacciones;
+    listaActual.push({
+      cantidad: this.campoCantidad.current.value,
+      tipo: this.campoTipo.current.value,
+      descripcion: this.campoDescripcion.current.value,
+      fecha: this.campoFecha.current.value,
+      /*moneda: this.campoMoneda.current.value*/
+    });
+    this.setState({ listaTransacciones: listaActual });
+    console.log(listaActual);
+
+  }
+
+  render() {
+
+    return (
 
 
-        //ESTO VA EN "Fecha:"
-        /*
-        <LocalizationProvider dateAdapter={AdapterDateFns}>
-                   <Stack spacing={3}>
-                     <DesktopDatePicker
-                        label="Date desktop"
-                        inputFormat="MM/dd/yyyy"
-                        value={value}
-                        onChange={handleChange}
-                        renderInput={(params) => <TextField {...params} />}
-                     />
-                   </Stack>
-                </LocalizationProvider>
-        */
-
-
-        <Box component="form" sx={{
+      <Box component="form" noValidate autoComplete="off">
+        {/*sx={{
         '& > :not(style)': { m:1,  width: '45ch' },
-      }}noValidate autoComplete="off">
-
+      }}*/}
         <div className="fondoT">
-                <h1 className="colorTransacciones">TRANSACCIONES</h1>
 
-                <h2>Cantidad: </h2>
-                <TextField id="cantidadT" label="Cantidad" variant="standard" />
-                
-                <h2>Tipo: </h2>
-                <TextField id="tipoT" label="Tipo" variant="standard" />
+          <h1 className="colorTransacciones">TRANSACCIONES</h1>
 
-                <h2>Descripción: </h2>
-                <TextField id="descripcionT" label="Descripción" variant="standard" />
+          <h2>Cantidad: </h2>
+          <TextField id="cantidadT" label="Cantidad" variant="standard" inputRef={this.campoCantidad} />
 
-                <h2>Fecha: </h2>
-                <TextField id="fechaT" label="Fecha" variant="standard" />
-                
-                <h2>Moneda: </h2>
-                <ListaDesplegable/>
-  
-                <Button className="guardar" variant="contained" color="success">Guardar</Button>
-                <Button variant="contained" color="error">Cancelar</Button>
+          <h2>Tipo: </h2>
+          <TextField id="tipoT" label="Tipo" variant="standard" inputRef={this.campoTipo} />
+
+          <h2>Descripción: </h2>
+          <TextField id="descripcionT" label="Descripción" variant="standard" inputRef={this.campoDescripcion} />
+
+          <h2>Fecha: </h2>
+          <TextField id="fechaT" label="Fecha" variant="standard" inputRef={this.campoFecha} />
+
+          <h2>Moneda: </h2>
+          <ListaDesplegable />
+
+          <Button className="guardar" variant="contained" color="success" type="button" onClick={this.lecturaValor.bind(this)}>Guardar</Button>
+          <Button variant="contained" color="error">Cancelar</Button>
 
         </div>
 
-        <div className="lista">     
-            
-                <p>
-                    Aquí irían los datos de las transacciones:
-                </p>
-        
-        
-                <p>
-                    Un soneto me manda hacer Violante
-                    que en mi vida me he visto en tanto aprieto;
-                    catorce versos dicen que es soneto;
-                    burla burlando van los tres delante.
+        <div className="lista">
 
-                    Yo pensé que no hallara consonante,
-                    y estoy a la mitad de otro cuarteto;
-                    mas si me veo en el primer terceto,
-                    no hay cosa en los cuartetos que me espante.
+          <p>Lista de transacciones:</p>
 
-                    Por el primer terceto voy entrando,
-                    y parece que entré con pie derecho,
-                    pues fin con este verso le voy dando.
+          <TableContainer component={Paper}>
+            <Table sx={{ minWidth: 650 }} aria-label="simple table">
+              <TableHead>
+                <TableRow>
+                  <TableCell>Cantidad</TableCell>
+                  <TableCell align="right">Tipo</TableCell>
+                  <TableCell align="right">Descripción</TableCell>
+                  <TableCell align="right">Fecha</TableCell>
+                  {/*<TableCell align="right">Moneda</TableCell>*/}
+                </TableRow>
+              </TableHead>
+              <TableBody>
 
-                    Ya estoy en el segundo, y aun sospecho
-                    que voy los trece versos acabando;
-                    contad si son catorce, y está hecho.
-                </p>
-              
-          </div>
-            
-        </Box>
-                
+                {this.state.listaTransacciones.map((elemento) => (
+                  <TableRow
+                    key={elemento.name}
+                    sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                  >
+                    <TableCell component="th" scope="row">{elemento.cantidad}</TableCell>
+                    <TableCell align="right">{elemento.tipo}</TableCell>
+                    <TableCell align="right">{elemento.descripcion}</TableCell>
+                    <TableCell align="right">{elemento.fecha}</TableCell>
+                    {/*<TableCell align="right">{elemento.moneda}</TableCell>*/}
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </TableContainer>
 
-                );  
-        }
+
+        </div>
+
+      </Box>
+
+
+    );
   }
+}
+
+

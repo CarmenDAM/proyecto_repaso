@@ -33,7 +33,8 @@ export default class Gastos extends React.Component {
       cantidad: this.campoCantidad.current.value,
       tipo: this.campoTipo.current.value,
       descripcion: this.campoDescripcion.current.value,
-      fecha: this.campoFecha.current.value
+      fecha: this.campoFecha.current.value,
+      /*moneda: this.campoMoneda.current.value*/
     });
     this.setState({ listaGastos: listaActual });
     console.log(listaActual);
@@ -85,6 +86,7 @@ export default class Gastos extends React.Component {
                   <TableCell align="right">Tipo</TableCell>
                   <TableCell align="right">Descripción</TableCell>
                   <TableCell align="right">Fecha</TableCell>
+                  {/*<TableCell align="right">Moneda</TableCell>*/}
                 </TableRow>
               </TableHead>
               <TableBody>
@@ -98,6 +100,7 @@ export default class Gastos extends React.Component {
                     <TableCell align="right">{elemento.tipo}</TableCell>
                     <TableCell align="right">{elemento.descripcion}</TableCell>
                     <TableCell align="right">{elemento.fecha}</TableCell>
+                    {/*<TableCell align="right">{elemento.moneda}</TableCell>*/}
                   </TableRow>
                 ))}
               </TableBody>
