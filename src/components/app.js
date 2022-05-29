@@ -1,12 +1,8 @@
-import './style.css';
-import '../.index.html';
-import './Estilos.css';
 
-
-//https://es.acervolima.com/conversor-de-divisas-en-javascript/
+//https://github.com/Jsalas902/conversor-moneda
 
 new Vue({
-    el:'#script',
+    el:'#app',
     data: {
         monedas: [],
         cantidad: 0,
