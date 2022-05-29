@@ -5,63 +5,59 @@ import './Estilos.css';
 
 //https://es.acervolima.com/conversor-de-divisas-en-javascript/
 
-new Vue({
-    el:'#script',
-    data: {
-        monedas: [],
-        cantidad: 0,
-        from: 'EUR',
-        to: 'USD',
-        result: 0
-    },
-    mounted() {
-        this.getMonedas()
-    },
-    computed: {
-        formatearMonedas() {
-            return Object.values(this.monedas);
-        },
-        calcularResultado() {
-            return (Number(this.cantidad) * this.result).toFixed(3);
-        },
-        desabilitado() {
-            return this.cantidad === 0 || ! this.cantidad;
-        }
-    },
-    methods: {
-        getMonedas() {
-            const datos  = localStorage.getItem('monedas');
-
-            if (datos) {
-                this.monedas = JSON.parse(datos);
-                return;
-            }
-
-            axios.get('https://free.currconv.com/api/v7/currencies?apiKey=9e3a780ed9f9a73733da')
-            .then(response => {
-                this.monedas = response.data.results;
-                localStorage.setItem('monedas', JSON.stringify(response.data.results));
-                // console.log(response);
-            }); 
-        },
-        convertirMonedas() {
-            const busqueda = `${this.from}_${this.to}`;
-
-            axios.get(`https://free.currconv.com/api/v7/convert?q=${busqueda}&apiKey=9e3a780ed9f9a73733da`)
-            .then(response => {
-                console.log(response);
-                this.result = response.data.results[busqueda].val;
-            });
-        }
-    },
-
-    watch: {
-        from() {
-            this.result = 0;
-        },
-        to() {
-            this.result = 0; 
-        }
-    }
-
+// include api for currency change
+const api = "https://api.exchangerate-api.com/v4/latest/USD";
+  
+// for selecting different controls
+var search = document.querySelector(".searchBox");
+var convert = document.querySelector(".convert");
+var fromCurrecy = document.querySelector(".from");
+var toCurrecy = document.querySelector(".to");
+var finalValue = document.querySelector(".finalValue");
+var finalAmount = document.getElementById("finalAmount");
+var resultFrom;
+var resultTo;
+var searchValue;
+  
+// Event when currency is changed
+fromCurrecy.addEventListener('change', (event) => {
+    resultFrom = `${event.target.value}`;
 });
+  
+// Event when currency is changed
+toCurrecy.addEventListener('change', (event) => {
+    resultTo = `${event.target.value}`;
+});
+  
+search.addEventListener('input', updateValue);
+  
+// function for updating value
+function updateValue(e) {
+    searchValue = e.target.value;
+}
+  
+// when user clicks, it calls function getresults 
+convert.addEventListener("click", getResults);
+  
+// function getresults
+function getResults() {
+    fetch(`${api}`)
+        .then(currency => {
+            return currency.json();
+        }).then(displayResults);
+}
+  
+// display results after convertion
+function displayResults(currency) {
+    let fromRate = currency.rates[resultFrom];
+    let toRate = currency.rates[resultTo];
+    finalValue.innerHTML = 
+       ((toRate / fromRate) * searchValue).toFixed(2);
+    finalAmount.style.display = "block";
+}
+  
+// when user click on reset button
+function clearVal() {
+    window.location.reload();
+    document.getElementsByClassName("finalValue").innerHTML = "";
+};

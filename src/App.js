@@ -6,6 +6,7 @@ import {
   Link,
   Switch
 } from "react-router-dom";
+import { createRoot } from 'react-dom/client';
 import uuid from 'react-uuid';
 import MenuElems from './data/MenuElems';
 import Button from '@mui/material/Button';
@@ -16,7 +17,6 @@ import Login from './components/Login';
 //import Button from 'react-native';
 //import 'react-native';
 
-//COLORES: primary, secondary, error, success, warning, default, inherit, info
 
 function App() {
   return (

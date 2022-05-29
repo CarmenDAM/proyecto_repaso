@@ -1,5 +1,10 @@
 
 //https://github.com/Jsalas902/conversor-moneda
+//https://www.youtube.com/watch?v=rzpzH_UQiLk
+
+//Instalar extensión de Chrome: https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=es
+
+import axios from 'axios';
 
 new Vue({
     el:'#app',
@@ -33,17 +38,17 @@ new Vue({
                 return;
             }
 
-            axios.get('https://free.currconv.com/api/v7/currencies?apiKey=9e3a780ed9f9a73733da')
+            axios.get('https://free.currconv.com/api/v7/convert?q=USD_PHP&compact=ultra&apiKey=94c9b8d794f30f157500')
             .then(response => {
                 this.monedas = response.data.results;
                 localStorage.setItem('monedas', JSON.stringify(response.data.results));
-                // console.log(response);
+                //console.log(response);
             }); 
         },
         convertirMonedas() {
             const busqueda = `${this.from}_${this.to}`;
 
-            axios.get(`https://free.currconv.com/api/v7/convert?q=${busqueda}&apiKey=9e3a780ed9f9a73733da`)
+            axios.get(`https://free.currconv.com/api/v7/convert?q=${busqueda}&apiKey=94c9b8d794f30f157500`)
             .then(response => {
                 console.log(response);
                 this.result = response.data.results[busqueda].val;
