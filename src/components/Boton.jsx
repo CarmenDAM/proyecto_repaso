@@ -6,7 +6,7 @@ class Boton extends React.Component {
     this.onClickButton = props.onClickButton;
     this.text = props.text;
   }
-
+ 
   render() {
     return (
       <Button

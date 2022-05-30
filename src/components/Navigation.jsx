@@ -29,9 +29,7 @@ export default function Navigation(props) {
     if (width < BOOTSTRAP_LG_SIZE) {
       return (
         <>
-          
-          
-            
+
             <Offcanvas.Body>
               <Nav>
                 <MenuOptions baseUrl={props.baseUrl} />
