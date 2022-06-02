@@ -8,12 +8,12 @@ test('Tests unitarios botón', ()  => {
     //const funcionTest = () => {console.log("hola :)")};
     // O mockeamos la función
     const funcionTest = jest.fn();
-    const botonTest = render(<Boton text="Hola" onClickButton={funcionTest} />);
+    const botonTest = render(<Boton text="Holi :D" onClickButton={funcionTest} />);
 
     // Mockeamos la consola 
     //console.log = jest.fn();
     // Testeando elemento
-    const boton = botonTest.getByText("Hola");
+    const boton = botonTest.getByText("Holi :D");
     console.log(prettyDOM(boton));
     //.click();
     fireEvent.click(boton);
