@@ -40,14 +40,13 @@ export default class Gastos extends React.Component {
     this.setState({ listaGastos: listaActual });
     console.log(listaActual);
 
-
-    function limpiar() {
-      document.getElementById("cancelar").value = "";
-  }
-
   }
 
   render() {
+
+    function limpiar() {
+      document.getElementById("cancelar").reset();
+  }
 
     return (
 
@@ -76,7 +75,7 @@ export default class Gastos extends React.Component {
           <ListaDesplegable />
 
           <Button className="guardar" variant="contained" color="success" type="button" onClick={this.lecturaValor.bind(this)}>Guardar</Button>
-          <Button variant="contained" color="error" type="button">Cancelar</Button>
+          <Button variant="contained" color="error" type="button" onClick={this.limpiar}>Cancelar</Button>
           {/*<Button variant="contained" color="error" type="button" onClick={this.limpiar()}>Cancelar</Button>  */}
           
           
