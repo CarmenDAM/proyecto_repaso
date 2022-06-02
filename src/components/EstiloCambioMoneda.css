@@ -1,5 +1,5 @@
 body {
-    background-color: #ffffff;
+    background-color: #ececec;
     color: rgb(0, 0, 0);
     padding: 40px;
     font-family: Arial;
@@ -35,8 +35,8 @@ body {
   }
 
   #convertir{
-    background-color: #6a9dfd!important;
-    margin-left: -150px !important;
+    background-color: #a3a3a3 !important;
+    margin-left: -175px !important;
     margin-top: 80px !important;
   }
 
@@ -68,6 +68,13 @@ body {
 
   #moneda1{
     margin-top: 5px;
+    background-color: #b4b4b4;
+
+  }
+
+  #moneda2{
+    margin-top: 5px;
+    background-color: #b4b4b4;
 
   }
   

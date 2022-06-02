@@ -49,45 +49,43 @@ export default class CambioMoneda extends React.Component {
         <Box component="form" noValidate autoComplete="off">
         <div>
 
-        <div>
-      <FormControl sx={{ m: 1, minWidth: 200 }}>
-        <InputLabel htmlFor="grouped-native-select">Moneda Original</InputLabel>
-        <Select native defaultValue="" id="moneda1" label="moneda">
-          <option aria-label="None" value="" />
-          <optgroup label="Monedas:">
-            <option value={1}>Option 1</option>
-            <option value={2}>Option 2</option>
-          </optgroup>
-          
-        </Select>
-      </FormControl>
-      <FormControl sx={{ m: 1, minWidth: 200 }}>
-        <InputLabel htmlFor="grouped-native-select">Moneda Convertida</InputLabel>
-        <Select native defaultValue="" id="moneda2" label="moneda">
-          <option aria-label="None" value="" />
-          <optgroup label="Monedas:">
-            <option value={1}>Option 1</option>
-            <option value={2}>Option 2</option>
-          </optgroup>
-          
-        </Select>
-      </FormControl>
-    </div>
-
-        <div>
-            <TextField id="monedaConvertir" label="Moneda a Convertir" variant="standard" inputRef={this.campoMoneda1} />
-            <Button id="convertir" variant="contained" type="button">Covetir</Button>
+            <div>
+        <FormControl sx={{ m: 1, minWidth: 200 }}>
+            <InputLabel htmlFor="grouped-native-select">Moneda Original</InputLabel>
+            <Select native defaultValue="" id="moneda1" label="moneda">
+            <option aria-label="None" value="" />
+            <optgroup label="Monedas:">
+                <option value={1}>Option 1</option>
+                <option value={2}>Option 2</option>
+            </optgroup>
+            
+            </Select>
+        </FormControl>
+        <FormControl sx={{ m: 1, minWidth: 200 }}>
+            <InputLabel htmlFor="grouped-native-select">Moneda Convertida</InputLabel>
+            <Select native defaultValue="" id="moneda2" label="moneda">
+            <option aria-label="None" value="" />
+            <optgroup label="Monedas:">
+                <option value={1}>Option 1</option>
+                <option value={2}>Option 2</option>
+            </optgroup>
+            
+            </Select>
+        </FormControl>
         </div>
 
-        <div>
-            <TextField id="monedaConvertida" label="Moneda Convertida" variant="standard" inputRef={this.campoMoneda1} />
+            <div>
+                <TextField id="monedaConvertir" label="Cantidad a Convertir" variant="standard" inputRef={this.campoMoneda1} />
+                <Button id="convertir" variant="contained" type="button">Convetir</Button>
+            </div>
+
+            <div>
+                <TextField id="monedaConvertida" label="Cantidad Convertida" variant="standard" inputRef={this.campoMoneda1} />
             </div>
       </div>
       
 
-      
-
-    </Box>
+      </Box>
   </div>
         
     );
