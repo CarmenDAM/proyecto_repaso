@@ -23,8 +23,9 @@ function App() {
     <Router>
       <nav>
         {MenuElems.map((item)=>{
+          if (!item.defaultRoute){
             return (<Button variant="contained" className={item.class} key={uuid()}> <Link to={item.path}>{item.text}</Link></Button>);
-          } )}
+}} )}
 
       </nav>
         {MenuElems.map(function showRoutes(item){
@@ -32,7 +33,7 @@ function App() {
       })}
 
         <Switch>
-          <Route exact path="/" component={Login} />
+          {/*<Route exact path="/" component={Login} />*/}
           {/*<Route path="/home" component={Home} />*/}
         </Switch>
 

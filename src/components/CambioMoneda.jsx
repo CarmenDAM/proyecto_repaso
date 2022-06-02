@@ -28,20 +28,6 @@ export default class CambioMoneda extends React.Component {
     
     render() {
 
-       
-        /*new Vue({
-            el: '#app',
-            data () {
-              return {
-                info: null
-              }
-            },
-            mounted () {
-              axios
-                .get('https://open.er-api.com/v6/latest/EUR')
-                .then(response => (this.info = response))
-            }
-          })*/
 
     return(
         

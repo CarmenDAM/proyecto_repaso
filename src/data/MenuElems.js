@@ -4,6 +4,7 @@ import Ingresos from '../components/Ingresos';
 import Transacciones from '../components/Transacciones';
 import CambioMoneda from '../components/CambioMoneda';
 import Home from '../components/Home';
+import Login from '../components/Login';
 import styles from '../components/Estilos.css';
 
 const MenuElems = [
@@ -47,7 +48,17 @@ const MenuElems = [
         text: "🏠 HOME 🏠",
         componentSite: <Home/>,
         class:"btn-Home"
+    },
+
+    {
+        path: "/",
+        defaultRoute:true,
+        text: "Login",
+        componentSite: <Login/>,
+        
     }
+
+    
 
 ];
 export default MenuElems;
