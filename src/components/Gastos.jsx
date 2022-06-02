@@ -24,6 +24,7 @@ export default class Gastos extends React.Component {
     this.campoDescripcion = React.createRef("");
     this.campoFecha = React.createRef("");
     this.state = { listaGastos: [] };
+    
   }
 
   lecturaValor() {
@@ -38,6 +39,11 @@ export default class Gastos extends React.Component {
     });
     this.setState({ listaGastos: listaActual });
     console.log(listaActual);
+
+
+    function limpiar() {
+      document.getElementById("cancelar").value = "";
+  }
 
   }
 
@@ -70,7 +76,10 @@ export default class Gastos extends React.Component {
           <ListaDesplegable />
 
           <Button className="guardar" variant="contained" color="success" type="button" onClick={this.lecturaValor.bind(this)}>Guardar</Button>
-          <Button variant="contained" color="error">Cancelar</Button>
+          <Button variant="contained" color="error" type="button">Cancelar</Button>
+          {/*<Button variant="contained" color="error" type="button" onClick={this.limpiar()}>Cancelar</Button>  */}
+          
+          
 
         </div>
 

@@ -1,0 +1,71 @@
+
+
+body {
+    background-color: #ffe3e3;
+    color: rgb(0, 0, 0);
+    padding: 40px;
+    font-family: Arial;
+    text-align: left;
+  }
+
+  h1 {
+    padding: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    font-size: 40px !important;
+    text-align: left !important;
+    font-size: 100;
+    margin-left:0px !important;
+  }
+
+  p {
+    padding: 1px;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    text-align: left;
+    font-size: 120;
+    margin-left: 5px;
+  }
+
+  #pass{
+    margin-left:30px !important;
+    text-align: left !important;
+    font-size: 18px !important;
+  
+  }
+
+  #NUser{
+    margin-left:30px !important;
+    margin-bottom: 5px !important;
+    text-align: left !important;
+    font-size: 18px !important;
+  
+  }
+
+  #check{
+    margin-left:30px !important;
+    text-align: left !important;
+    font-size: 10px !important;
+  
+  }
+
+  .form-check-label{
+    font-size: 13px !important;
+  }
+
+  
+  #BotonLogin{
+    margin-left:60px !important;
+    text-align: left !important;
+  
+  }
+
+  /*Button{
+    margin-left:100px !important;
+    text-align: left !important;
+  
+  }*/
+
+  #formBasicPassword{
+    margin-top:5px !important;
+    margin-bottom:5px !important;
+    text-align: left !important;
+  }

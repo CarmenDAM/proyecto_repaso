@@ -42,7 +42,6 @@ export default function Navigation(props) {
     } else {
       return (
         <Nav>
-          
           <Boton text="Logout" onClickButton={logout} />
         </Nav>
       );

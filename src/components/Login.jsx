@@ -3,6 +3,7 @@ import Boton from './Boton';
 import { Container,Form } from 'react-bootstrap'
 import { useHistory } from "react-router-dom";
 import { Users } from "./Users";
+import './EstilosLogin.css';
 
 export default function Login(){
   
@@ -22,24 +23,24 @@ export default function Login(){
 
   return (
     <>
-     <h1>Inicio de sesión</h1>
+     <h1>🔒 Inicio de sesión 🔒</h1>
       <Container>
         <Form>
           <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Nombre de usuario: </Form.Label>
+            <Form.Label id="NUser">Nombre de usuario: </Form.Label>
             <Form.Control ref={nameInput} type="text" placeholder="Usuario" />
-            <Form.Text className="text-muted">
-               Su email no será compartido con nadie
-            </Form.Text>
+            <Form.Text className="text-muted"/>
+                        
           </Form.Group>
+
           <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label>Contraseña: </Form.Label>
+            <Form.Label id="pass">Contraseña: </Form.Label>
             <Form.Control ref={pwdInput} type="password" placeholder="Contraseña" />
             </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicCheckbox">
-            <Form.Check type="checkbox" label="Mantén la sesión iniciada" />
+            <Form.Check id="check" type="checkbox" label="Mantener la sesión iniciada" />
           </Form.Group>
-          <Boton text="Login" onClickButton={logUser} />
+          <Boton id="BotonLogin" text="Login" onClickButton={logUser} />
         </Form>
       </Container>
     </>

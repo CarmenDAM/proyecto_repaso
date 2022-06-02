@@ -1,17 +1,17 @@
 
-
 import Gastos from '../components/Gastos';
 import Ingresos from '../components/Ingresos';
 import Transacciones from '../components/Transacciones';
+import CambioMoneda from '../components/CambioMoneda';
+import Home from '../components/Home';
 import styles from '../components/Estilos.css';
 
 const MenuElems = [
 
-
     {
         path: "/gastos",
         defaultRoute:false,
-        text: "Gastos",
+        text: "➖ Gastos➖ ",
         componentSite: <Gastos/>,
         class:"btn-gastos"
     },
@@ -20,7 +20,7 @@ const MenuElems = [
     {
         path: "/ingresos",
         defaultRoute:false,
-        text: "Ingresos",
+        text: "➕ Ingresos➕ ",
         componentSite: <Ingresos/>,
         class:"btn-ingresos"
     },
@@ -28,17 +28,25 @@ const MenuElems = [
     {
         path: "/transacciones",
         defaultRoute:false,
-        text: "Transacciones",
+        text: "⇆ Transacciones ⇆",
         componentSite: <Transacciones/>,
         class:"btn-transacciones"
     },
-
+ 
     {
         path: "/cambioMoneda",
         defaultRoute:false,
-        text: "Cambio de Moneda",
-        componentSite: <cambioMoneda/>,
+        text: "💰Cambio de Moneda💰",
+        componentSite: <CambioMoneda/>,
         class:"btn-cambioMoneda"
+    },
+
+    {
+        path: "/home",
+        defaultRoute:false,
+        text: "🏠 HOME 🏠",
+        componentSite: <Home/>,
+        class:"btn-Home"
     }
 
 ];

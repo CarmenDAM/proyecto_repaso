@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Switch, useRouteMatch } from "react-router-dom";
 import Navigation from "./Navigation";
+import índice from "../img/índice.jpg"
 
 
 export default function Home() {
@@ -9,7 +10,8 @@ export default function Home() {
   return (
     <>
      <Navigation authorized={loggedIn} baseUrl={url} />
-     
+
+     <img src={índice}></img>
     </>
   );
 }
