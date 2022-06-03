@@ -3,7 +3,7 @@ import React from 'react';
 import {fireEvent, render, prettyDOM} from '@testing-library/react';
 import Boton from './Boton';
 
-test('Tests unitarios botón', ()  => {
+test('Tests unitarios boton', ()  => {
     // Definimos una función para pasar al botón
     //const funcionTest = () => {console.log("hola :)")};
     // O mockeamos la función

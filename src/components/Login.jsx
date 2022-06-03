@@ -11,6 +11,17 @@ export default function Login(){
   const nameInput = useRef();
   const pwdInput = useRef();
 
+  /*
+  //Quería incluir un mensaje de error en caso de loguearse con un usuario no registrado
+  var popupWindow = null;
+  constructor(url) {
+    super(url);
+  }
+
+  function ventana(url) {
+    popupWindow = window.open(url,'Usuario no registrado');
+  }*/
+
   const logUser = () => {
 
     const user = Users.find(item => item.name === nameInput.current.value && item.password === pwdInput.current.value);
@@ -18,8 +29,10 @@ export default function Login(){
     if (user !== undefined) {
       localStorage.setItem('loggedIn', true);
       history.push("/home");
-    }
-  }
+    } /*else  {
+      ventana(url);
+  }*/
+}
 
   return (
     <>
@@ -29,8 +42,7 @@ export default function Login(){
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label id="NUser">Nombre de usuario: </Form.Label>
             <Form.Control ref={nameInput} type="text" placeholder="Usuario" />
-            <Form.Text className="text-muted"/>
-                        
+            <Form.Text className="text-muted"/>     
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicPassword">

@@ -41,8 +41,8 @@ export default class CambioMoneda extends React.Component {
             <Select native defaultValue="" id="moneda1" label="moneda">
             <option aria-label="None" value="" />
             <optgroup label="Monedas:">
-                <option value={1}>Option 1</option>
-                <option value={2}>Option 2</option>
+                <option value={1}>Moneda 1</option>
+                <option value={2}>Moneda 2</option>
             </optgroup>
             
             </Select>
@@ -52,8 +52,8 @@ export default class CambioMoneda extends React.Component {
             <Select native defaultValue="" id="moneda2" label="moneda">
             <option aria-label="None" value="" />
             <optgroup label="Monedas:">
-                <option value={1}>Option 1</option>
-                <option value={2}>Option 2</option>
+                <option value={1}>Moneda 1</option>
+                <option value={2}>Moneda 2</option>
             </optgroup>
             
             </Select>
