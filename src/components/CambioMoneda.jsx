@@ -15,6 +15,8 @@ import ListSubheader from '@mui/material/ListSubheader';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
+import { useEffect, useState } from "react";
+
 //https://open.er-api.com/v6/latest/EUR
 
 export default class CambioMoneda extends React.Component {
@@ -27,6 +29,23 @@ export default class CambioMoneda extends React.Component {
       }
     
     render() {
+
+            /*const [Moneda, setMoneda] = useState("");
+            const handleClick = () => {
+                fetchMoneda()
+              }
+            const fetchMoneda = () => {
+              fetch("https://open.er-api.com/v6/latest/EUR")
+                .then((response) => response.json())
+                .then((data) => setMoneda(data.Moneda));
+            }
+            useEffect(() => {
+                fetchMoneda()
+            }, []); */
+
+
+            
+            
 
 
     return(
@@ -69,6 +88,16 @@ export default class CambioMoneda extends React.Component {
                 <TextField id="monedaConvertida" label="Cantidad Convertida" variant="standard" inputRef={this.campoMoneda1} />
             </div>
       </div>
+
+
+      {/*<div  className="App">
+      <h3>Intento cargar API</h3>
+      <hr />
+      <h6>{Moneda}</h6>
+      <hr />
+      <button onClick= {() => handleClick()}>Prueba:</button>
+         
+    </div>*/}
       
 
       </Box>
@@ -77,3 +106,4 @@ export default class CambioMoneda extends React.Component {
     );
     }
 }
+
