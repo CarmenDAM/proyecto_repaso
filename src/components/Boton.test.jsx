@@ -5,7 +5,7 @@ import Boton from './Boton';
 
 test('Tests unitarios boton', ()  => {
     // Definimos una función para pasar al botón
-    //const funcionTest = () => {console.log("hola :)")};
+    //const funcionTest = () => {console.log("Test del botón")};
     // O mockeamos la función
     const funcionTest = jest.fn();
     const botonTest = render(<Boton text="Test del botón" onClickButton={funcionTest} />);
@@ -19,6 +19,6 @@ test('Tests unitarios boton', ()  => {
     fireEvent.click(boton);
     expect(funcionTest).toHaveBeenCalledTimes(1);
     // Testeando llamada a la función del botón (imprime en consola)
-    //expect(console.log.mock.calls[0][0]).toBe('hola :)');
+    //expect(console.log.mock.calls[0][0]).toBe('Test del botón');
 
 });
